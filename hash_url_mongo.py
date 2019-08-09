@@ -18,11 +18,11 @@ app = Flask(__name__)
 manager = Manager(app)
 
 app.config['MONGO_DBNAME'] = 'news'
-app.config['MONGO_URI'] = 'mongodb://192.168.20.189:27017/news'
+app.config['MONGO_URI'] = 'mongodb://127.0.0.1:27017/news'
 mongo = PyMongo(app)
 
 app.config['MONGO_DBNAME'] = 'online_news'
-app.config['MONGO_URI'] = 'mongodb://192.168.20.189:27017/online_news'
+app.config['MONGO_URI'] = 'mongodb://127.0.0.1:27017/online_news'
 mongo_insert = PyMongo(app)
 
 @manager.command
